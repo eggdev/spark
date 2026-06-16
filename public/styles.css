@@ -304,6 +304,16 @@ body {
 .retrieval { display: flex; flex-direction: column; gap: 12px; max-width: 720px; margin: 0 auto 26px; text-align: left; }
 .medal { font-size: 60px; filter: drop-shadow(0 6px 20px rgba(118,185,0,0.4)); }
 
+.credits { max-width: 720px; margin: 8px auto 26px; text-align: left;
+  border-top: 1px solid var(--line); padding-top: 22px; }
+.credits-intro { color: var(--ink-dim); font-size: 14px; line-height: 1.6; margin-bottom: 16px; max-width: 68ch; }
+.credits-list { list-style: none; display: flex; flex-direction: column; gap: 12px; margin-bottom: 16px; }
+.credits-list li { display: flex; flex-direction: column; gap: 3px; }
+.credits-link { color: var(--blue); text-decoration: none; font-weight: 600; font-size: 14.5px; width: fit-content; }
+.credits-link:hover { text-decoration: underline; }
+.credits-role { color: var(--ink-dim); font-size: 13.5px; line-height: 1.5; }
+.credits-note { color: var(--ink-faint); font-size: 13px; line-height: 1.55; padding-top: 6px; border-top: 1px dashed var(--line); max-width: 68ch; }
+
 .reset-link { background: none; border: none; color: var(--ink-faint); font-size: 12.5px; cursor: pointer; text-decoration: underline; margin-top: 8px; }
 .reset-link:hover { color: var(--ink-dim); }
 

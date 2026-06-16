@@ -374,12 +374,27 @@
           </div>
         </div>
       </div>`).join("");
+    const cr = D.credits;
+    const creditsHTML = cr ? `
+      <div class="credits">
+        <p class="section-label" style="text-align:left">Sources &amp; credits</p>
+        <p class="credits-intro">${esc(cr.intro)}</p>
+        <ul class="credits-list">
+          ${cr.items.map(it => `
+            <li>
+              <a class="credits-link" href="${it.url}" target="_blank" rel="noopener">${esc(it.name)} ↗</a>
+              <span class="credits-role">${esc(it.role)}</span>
+            </li>`).join("")}
+        </ul>
+        ${cr.note ? `<p class="credits-note">${esc(cr.note)}</p>` : ""}
+      </div>` : "";
     s.innerHTML = `
       <div class="slide-inner finish">
         <div class="medal">🏆</div>
         <div class="big">You built a <span class="grad">local orchestrator</span></div>
         <p>Reboot-proof, reachable from anywhere over Tailscale, doing one valuable job on its own. Before you go, a spaced retrieval round across all three days. The flip is the learning.</p>
         <div class="retrieval">${cards}</div>
+        ${creditsHTML}
         <button class="cta" id="topBtn">↑ Back to the top</button>
         <div><button class="reset-link" id="resetBtn">Reset all progress</button></div>
       </div>`;

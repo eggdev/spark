@@ -52,6 +52,18 @@ npx wrangler deploy
 
 Edit the static files and just refresh `public/index.html` for pure frontend work; use `wrangler dev` when testing the sync API.
 
+## Sources & credits
+
+Honest framing: this deck **aggregates and synthesizes** community knowledge about the DGX Spark. The technical substance belongs to the people and resources below; the curriculum, the writing, the learning method, and the platform are original.
+
+- **[Matt Pocock — the `teach` skill](https://github.com/mattpocock)** — the teaching-workspace approach that started this whole project.
+- **[Matt Van Horn — the `/last30days` skill](https://github.com/mvanhorn/last30days-skill)** — used to aggregate what the community is actually saying across Reddit, X, Hacker News, GitHub, and the web (MIT).
+- **[KubeSimplify — "7 Days of DGX Spark"](https://blog.kubesimplify.com/series/7-days-of-dgx-spark)** — primary external walkthrough series; recommended reading on Day 1.
+- **[llama.cpp — DGX Spark performance discussion](https://github.com/ggml-org/llama.cpp/discussions/16578)** — source of the sm_121 CPU-fallback diagnosis.
+- **[NVIDIA — DGX Spark agent playbooks](https://x.com/NVIDIARTXSpark/status/2055317325444710872)** — Ollama / Hermes local-agent setup and tuned model defaults.
+
+Built and visually polished with the **impeccable** design skill. The learning method is grounded in established cognitive science: desirable difficulty, retrieval practice, the Feynman technique, and the spacing effect.
+
 ## Notes
 
 - The site is public; the sync code keeps each person's progress separate (not auth). A Cloudflare Access gate can be added if it should be private.

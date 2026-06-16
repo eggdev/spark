@@ -331,6 +331,19 @@ const CURRICULUM = {
     }
   ],
 
+  // Sources & credits, shown on the finish slide. Edit freely.
+  credits: {
+    intro: "Honest framing: this deck aggregates and synthesizes community knowledge about the DGX Spark. The technical substance belongs to the people and resources below; the curriculum, the writing, the learning method, and the platform are original. Corrections and additions welcome.",
+    items: [
+      { name: "Matt Pocock, the teach skill", role: "The teaching-workspace approach that started this whole project.", url: "https://github.com/mattpocock" },
+      { name: "Matt Van Horn, the /last30days skill", role: "Used to aggregate what the community is actually saying across Reddit, X, Hacker News, GitHub, and the web.", url: "https://github.com/mvanhorn/last30days-skill" },
+      { name: "KubeSimplify, “7 Days of DGX Spark”", role: "Primary external walkthrough series; recommended reading on Day 1.", url: "https://blog.kubesimplify.com/series/7-days-of-dgx-spark" },
+      { name: "llama.cpp, DGX Spark performance discussion", role: "Source of the sm_121 CPU-fallback diagnosis.", url: "https://github.com/ggml-org/llama.cpp/discussions/16578" },
+      { name: "NVIDIA, DGX Spark agent playbooks", role: "Ollama / Hermes local-agent setup and tuned model defaults.", url: "https://x.com/NVIDIARTXSpark/status/2055317325444710872" }
+    ],
+    note: "Built and visually polished with the impeccable design skill. Learning method grounded in established cognitive science: desirable difficulty, retrieval practice, the Feynman technique, and the spacing effect."
+  },
+
   // Final retrieval round, spaced practice pulling across all three days.
   finalRecall: [
     { q: "One sentence: what is your box good at, and what is it bad at?", a: "Good at capacity, holding big models resident and serving high concurrency. Bad at single-stream speed, because it's memory-bandwidth-limited (~273 GB/s)." },
