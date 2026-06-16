@@ -1,0 +1,15 @@
+{
+  "name": "spark-eggers",
+  "private": true,
+  "version": "1.0.0",
+  "description": "The 3-Day DGX Spark Path — interactive learning deck with cross-device progress sync, hosted on Cloudflare.",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "kv:create": "wrangler kv namespace create SPARK_STATE",
+    "tail": "wrangler tail"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}

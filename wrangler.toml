@@ -1,0 +1,26 @@
+# spark.eggers.dev — Cloudflare Worker (static deck + KV progress sync)
+name = "spark-eggers"
+main = "src/worker.js"
+compatibility_date = "2026-06-01"
+workers_dev = true   # also serves at spark-eggers.eggdev.workers.dev (stable fallback)
+
+# Routing note: the eggers.dev zone has a wildcard route `*.eggers.dev/*` -> eggers-dev
+# (the branded 404 catch-all). A bare custom domain for spark.eggers.dev gets shadowed
+# by that wildcard, so we ALSO declare a more-specific route `spark.eggers.dev/*`, which
+# wins by specificity. The custom_domain entry manages the proxied DNS record + TLS cert;
+# the explicit route guarantees precedence. Both target this worker, the catch-all is
+# left untouched.
+routes = [
+  { pattern = "spark.eggers.dev", custom_domain = true },
+  { pattern = "spark.eggers.dev/*", zone_name = "eggers.dev" }
+]
+
+# Serve the static site from ./public via the ASSETS binding.
+[assets]
+directory = "./public"
+binding = "ASSETS"
+
+# Cross-device progress storage.
+[[kv_namespaces]]
+binding = "SPARK_STATE"
+id = "0b27e6a3a013447b9b3546841baec293"

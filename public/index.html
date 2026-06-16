@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover" />
+  <title>The 3-Day DGX Spark Path</title>
+  <meta name="description" content="An interactive, 3-day, slide-based walkthrough for going from an unopened NVIDIA DGX Spark to a local AI orchestrator you understand." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='42' fill='%2376b900'/></svg>" />
+</head>
+<body>
+
+  <!-- top bar -->
+  <header class="topbar">
+    <div class="brand">
+      <span class="dot"></span>
+      <div>DGX Spark Path<small>GB10 · local LLM orchestrator</small></div>
+    </div>
+    <div class="progress-wrap">
+      <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+      <div class="progress-label" id="progressLabel">0/0 steps · 0%</div>
+    </div>
+    <button class="topbtn" id="syncBtn" title="Sync progress across devices">⟲ Sync</button>
+    <button class="topbtn" id="worriesBtn">⚠ The 6 watch-outs</button>
+  </header>
+
+  <!-- day rail -->
+  <nav class="rail" id="rail"></nav>
+
+  <!-- stage -->
+  <main class="stage">
+    <div class="slides" id="slides"></div>
+  </main>
+
+  <!-- nav arrows -->
+  <div class="nav">
+    <button id="prevBtn">← Back</button>
+    <button id="nextBtn" class="primary">Start →</button>
+  </div>
+
+  <!-- modal -->
+  <div class="scrim" id="scrim"></div>
+
+  <!-- pinned worries drawer -->
+  <div class="drawer-scrim" id="drawerScrim"></div>
+  <aside class="drawer" id="drawer">
+    <div class="drawer-head">
+      <h3>The 6 things to worry about<small>Pin these across all three days</small></h3>
+      <button class="modal-x" id="drawerClose" aria-label="Close">×</button>
+    </div>
+    <div class="drawer-body" id="drawerBody"></div>
+  </aside>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
